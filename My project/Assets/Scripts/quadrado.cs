@@ -41,5 +41,11 @@ Vector2 posicaoSpawn = new Vector2(posX, Camera.main.orthographicSize + 1f);
 
 GameObject novoQuadrado = Instantiate(quadradoPrefab, posicaoSpawn, Quaternion.identity);
 
+Rigidbody2D rb = novoQuadrado.GetComponent<Rigidbody2D>();
+    if (rb != null)
+    {
+        rb.linearVelocity = new Vector2(0f, Random.Range(-2f, -6f));
+    }
+
 }
 }
